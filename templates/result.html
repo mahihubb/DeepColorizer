@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorization Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 10px;
+        }
+
+        .image-container {
+            width: 40%;
+            margin: 0 20px;  /* Adjusted margin for better spacing */
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 90%;
+            max-height: 60vh;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #34495e;
+        }
+
+        .divider {
+            width: 5%; /* Reduced the width of the divider for better alignment */
+            text-align: center;
+            font-size: 24px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <h2>Original Image</h2>
+        <img src="/uploads/{{ original_image }}" alt="Original Image">
+    </div>
+    
+    <div class="divider">➔</div>
+    
+    <div class="image-container">
+        <h2>Colorized Image</h2>
+        <img src="/uploads/{{ colorized_image }}" alt="Colorized Image">
+    </div>
+</div>
+
+</body> 
+</html>

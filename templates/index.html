@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Colorizer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 2px dashed #3498db;
+            border-radius: 5px;
+            background-color: #ecf6fd;
+            cursor: pointer;
+            color: #2980b9;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #95a5a6;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Colorize Your Images</h1>
+        <p>Upload a black & white image to bring it to life with color.</p>
+        
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload & Colorize</button>
+        </form>
+
+        <footer>
+            Powered by AI Colorization | © 2024
+        </footer>
+    </div>
+
+</body>
+</html>
